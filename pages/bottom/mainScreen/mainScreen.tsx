@@ -1,9 +1,16 @@
-import {Text, View} from 'react-native';
+import {ScrollView, Text, View} from 'react-native';
+import Board from '../../../components/board';
+import styles from './style';
 
 export default function MainScreen() {
   return (
-    <View>
-      <Text>Hello Hello</Text>
+    <View style={styles.container}>
+      <ScrollView style={styles.main}>
+        <Board />
+        <Board />
+        <Board />
+        <Board />
+      </ScrollView>
     </View>
   );
 }
