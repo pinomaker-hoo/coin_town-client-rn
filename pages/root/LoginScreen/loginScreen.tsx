@@ -1,7 +1,11 @@
 import {Image, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import styles from './style';
 
-export default function LoginScreen() {
+export default function LoginScreen({navigation}: any) {
+  const onClickLogin = () => {
+    navigation.navigate('Bottom');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.topBox}>
@@ -12,7 +16,7 @@ export default function LoginScreen() {
         <TextInput style={styles.bottomBoxInput} />
         <Text style={styles.bottomBoxLabel}>Password</Text>
         <TextInput style={styles.bottomBoxInput} />
-        <TouchableOpacity style={styles.bottomBoxBtn}>
+        <TouchableOpacity style={styles.bottomBoxBtn} onPress={onClickLogin}>
           <Text style={styles.bottomBoxBtnText}>LOGIN</Text>
         </TouchableOpacity>
         <View style={styles.bottomBoxSubView}>
